@@ -33,13 +33,13 @@ During testing of the certificate generation functionality, we started with a ba
 
 **Initial Test Payload:** `{{7*7}}`
 
+![Further SSTI Testing](trying_ssti.png)
+*Initial Test Payload*
+
 ![Generated Certificate with SSTI Test](generated_certificate.png)
-*Result of testing {{7*7}} - Notice the output shows "49" indicating successful template injection*
+*Result of the payload - Notice the output shows "49" indicating successful template injection*
 
 The successful execution of the mathematical expression `{{7*7}}` returning `49` confirms that the application is vulnerable to Server-Side Template Injection, likely using Jinja2 template engine based on Flask framework indicators.
-
-![Further SSTI Testing](trying ssti.png)
-*Initial Test Payload*
 
 ## Exploitation Process
 
