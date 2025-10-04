@@ -59,7 +59,7 @@ Since CTF flags are commonly stored as environment variables, we crafted a paylo
 
 **Note:** Hex encoding (`\x5f`) is used to bypass potential filters that might block `__` sequences.
 
-![Environment Variables](get env vraiables.png)
+![Environment Variables](get_env_vraiables.png)
 *Environment variable enumeration results showing available environment variables*
 
 ### Step 2: Flag Extraction Optimization
