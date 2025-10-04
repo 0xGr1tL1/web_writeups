@@ -24,7 +24,7 @@ ZmxhZ18xMzM3LnR4dA==
 I decoded the base64 string using the following command:
 ```bash
 echo "ZmxhZ18xMzM3LnR4dA==" | base64 -d
-```
+
 I got the result:
 `flag_1337.txt`
 
