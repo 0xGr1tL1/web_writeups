@@ -115,17 +115,5 @@ This was a **webhook-based credential harvesting attack** where:
 SecurinetsENIT{27186e6c7a5b39d5d864031dcbe95a7f}
 ```
 
-## Lessons Learned
-
-1. **Input Validation**: Service registration endpoints should validate and sanitize URLs
-2. **Bot Security**: Admin bots should not expose sensitive credentials when visiting external URLs
-3. **Access Control**: Hash-based authentication should use secure, non-predictable values
-4. **URL Whitelisting**: Only trusted domains should be allowed for service registration
-
-## Tools Used
-- `curl` - For HTTP requests
-- `webhook.site` - For credential capture
-- Browser - For API documentation review
-
 ---
 *Challenge completed successfully through webhook-based credential harvesting technique.*
