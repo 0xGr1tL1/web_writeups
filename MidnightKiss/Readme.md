@@ -171,13 +171,6 @@ curl -X POST http://68.219.177.187:8012/api/probe \
 {"result":"{\"message\":\"Config applied\",\"loaded\":\"SecurinetsENIT{58cc662ea042cfc6d0cd6f8a04442a6a}\"}"}
 ```
 
-## Key Takeaways
-
-1. **JWT Security:** Always validate JWT signatures and reject tokens with `alg: none`
-2. **SSRF Prevention:** Implement strict allowlists for outbound requests
-3. **YAML Security:** Use `yaml.safe_load()` instead of `yaml.load()` to prevent deserialization attacks
-4. **Defense in Depth:** Multiple vulnerabilities were chained together - fixing any one would have prevented the exploit
-
 ## Timeline
 
 1. Discovered JWT authentication bypass using `alg: none`
