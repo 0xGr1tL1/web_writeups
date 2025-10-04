@@ -13,7 +13,7 @@ The School Portal challenge involves exploiting a Server-Side Template Injection
 ![Home Page](home_page.png)
 *Initial landing page of the School Portal*
 
-![Registration](registeration.png)
+![Registration](registration.png)
 *User registration form*
 
 ![Dashboard](dashboard.png)
@@ -22,7 +22,7 @@ The School Portal challenge involves exploiting a Server-Side Template Injection
 ## Vulnerability Discovery
 
 ### Certificate Generation Feature
-The application includes a certificate generation feature that appears to accept the certificate name . This is often a prime target for template injection attacks.
+The application includes a certificate generation feature that appears to accept the certificate name. This is often a prime target for template injection attacks.
 
 ![Certificate Generation Form](certificate_generation.png)
 *Certificate generation*
@@ -58,7 +58,7 @@ Since we know that the flag is stored as an environment variable, I crafted a pa
 
 **Note:** Hex encoding (`\x5f`) is used to bypass potential filters that might block `__` sequences.
 
-![Environment Variables](get_env_vraiables.png)
+![Environment Variables](get_env_variables.png)
 *Environment variable enumeration results showing available environment variables*
 
 ### Step 2: Flag Extraction Optimization

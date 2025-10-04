@@ -35,7 +35,7 @@ admin_response = requests.get(admin_url, headers=headers)
 print(f"Admin doc: {admin_response.text}")
 
 
-# Acces the admin docs and find the flag
+# Access the admin docs and find the flag
 
 docs_id=["doc_003","doc_004"]
 
