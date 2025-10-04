@@ -1,8 +1,8 @@
-# Network Management Service CTF Writeup
+# MidnightKiss Writeup
 
 ## Challenge Information
 
-- **Title:** Network Management Service
+- **Title:** MidnightKiss
 - **Description:** A network management service available for authenticated admin. The flag is in env: `FLAG`
 - **Service:** HTTP API with JWT authentication
 - **URL:** http://68.219.177.187:8012
