@@ -26,8 +26,7 @@ I decoded the base64 string using the following command:
 echo "ZmxhZ18xMzM3LnR4dA==" | base64 -d
 ```
 I got the result:
-```flag_1337.txt
-```
+`flag_1337.txt`
 
 ### Step 5: Obtaining the Flag
 The base64 decoding revealed the filename `flag_1337.txt`. To get the actual flag, I visited:
