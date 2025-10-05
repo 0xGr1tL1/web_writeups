@@ -12,7 +12,6 @@ First, I examined the web application by viewing the source code in the browser'
 ### Step 2: Application Analysis
 ![app.js](appjs.png)
 
-By analyzing the app.js file, I was able to identify key components and understand how the application processes requests.
 
 ### Step 3: Finding the Encoded Data
 Through source code analysis, I discovered a base64-encoded string that appeared to contain important information. The encoded string was:
