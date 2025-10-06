@@ -1,5 +1,5 @@
 """ 
-    This is the writeup for the secure portal CTF challenge
+    This is the writeup for the TheDoor CTF challenge
     this challenge is about finding jwt-key in the debug logs http://68.219.177.187:8010/debug/logs?show_error=true
     then using the jwt-key to create a valid jwt token with admin privileges (Messi user) 
 """
